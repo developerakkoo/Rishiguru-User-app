@@ -6,7 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
-  }
+  },
+  {
+    path: 'create-blog',
+    loadChildren: () => import('./create-blog/create-blog.module').then( m => m.CreateBlogPageModule)
+  },
+ 
 ];
 
 @NgModule({

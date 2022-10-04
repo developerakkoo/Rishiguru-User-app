@@ -1,17 +1,78 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+     Dashboard
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="3">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Active Users</ion-card-subtitle>
+          <ion-card-title>33</ion-card-title>
+        </ion-card-header>
+      
+      </ion-card>
+    </ion-col>
+    <ion-col size="3">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Active Astrologers</ion-card-subtitle>
+          <ion-card-title>56</ion-card-title>
+        </ion-card-header>
+     
+      </ion-card>
+    </ion-col>
+    <ion-col size="3">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Today's Earning</ion-card-subtitle>
+          <ion-card-title> {{766 |currency:'INR'}} </ion-card-title>
+        </ion-card-header>
+      
+      </ion-card>
+    </ion-col>
+    <ion-col size="3">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Monthly Earning</ion-card-subtitle>
+          <ion-card-title>{{3500 | currency:'INR'}}</ion-card-title>
+        </ion-card-header>
+       
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-card style="height: 250px;">
+  <ion-card-header>
+    Recharge Stats
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item-divider>
+      <ion-label>Recharge of <strong>{{200 | currency:'INR'}} </strong> is done by User</ion-label>
+    </ion-item-divider>
+    <ion-item-divider>
+      <ion-label>Recharge of <strong>{{500 | currency:'INR'}} </strong> is done by User</ion-label>
+    </ion-item-divider>
+    <ion-item-divider>
+      <ion-label>Recharge of <strong>{{600 | currency:'INR'}} </strong> is done by User</ion-label>
+    </ion-item-divider>
+    <ion-item-divider>
+      <ion-label>Recharge of <strong>{{400 | currency:'INR'}} </strong> is done by User</ion-label>
+    </ion-item-divider>
+  </ion-card-content>
+</ion-card>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+
+
+/user/chat/{
+  id
+}
+
+
+chat/userId/:otherUserId

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Upload Blog Post</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="9" offset="2">
+      <ion-input type="text" placeholder="Title" [(ngModel)]="title"></ion-input>
+      <ion-input type="text" placeholder="Tag" [(ngModel)]="tag"></ion-input>
+      <input type="file" (change)="uploadFile($event)" />
+      <div>{{ uploadPercent | async }}</div>
+      <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
+      <ion-item>
+      <ion-label position="floating">Content</ion-label>
+        <ion-textarea [(ngModel)]="content"  rows="9"></ion-textarea>
+      </ion-item>
+
+    </ion-col>
+    <ion-col size="6"></ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+   <ion-button *ngIf="this.downloadURL" (click)="uploadPost()" expand="block" size="large">
+     UPLOAD
+   </ion-button>
+  </ion-toolbar>
+</ion-footer>
